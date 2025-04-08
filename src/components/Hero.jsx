@@ -1,12 +1,18 @@
 import { FiArrowRight, FiStar } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 export default function Hero() {
     return (
         <>
-            <section className="relative overflow-hidden bg-gradient-to-br from-[#FFE4F9] via-[#FCFFB2] to-[#E5FBFF] py-16 md:py-24">
+            <section className="relative overflow-hidden bg-gradient-to-br from-[#D2E3E3] via-[#FFF4D0] to-[#FFC844] py-16 md:py-24">
                 <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center">
-                    <div className="lg:w-1/2 mb-10 lg:mb-0">
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl xlg:text-8xl font-bold leading-tight mb-6">
+                    <motion.div
+                    className="lg:w-1/2 mb-10 lg:mb-0"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    >
+                        <h1 className="text-4xl md:text-5xl lg:text-7xl text-[#254A5D] drop-shadow-sm tracking-tight mb-6">
                             Place Your Brand Into Real Parenting Moments
                         </h1>
                         <p className="text-lg md:text-xl mb-8 text-neutral-700 max-w-xl">
@@ -14,8 +20,8 @@ export default function Hero() {
                         <br /><br />
                         We help brands show up seamlessly in these moments, where parents are already paying attention.
                         </p>
-                        <button className="bg-gradient-to-r from-[#69D2AB] to-[#4CC493] hover:from-[#4CC493] hover:to-[#3DB382] text-white font-bold py-5 px-8 rounded-xl shadow-lg transform transition-transform hover:scale-105 border-2 border-white">
-                            Let's Talk ⚡️
+                        <button className="bg-white hover:bg-[#259591] hover:text-white cursor-pointer text-gray-900 font-bold py-4 px-8 rounded-xl shadow-lg transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+                            Let's Talk 👋🏻
                         </button>
                         <div>
                             <div className="mt-8 flex items-center">
@@ -25,7 +31,7 @@ export default function Hero() {
                             </div>
                             <p className="text-sm text-neutral-600">Trusted by 45,000+ parents</p>
                         </div>
-                    </div>
+                    </motion.div>
                     <div>
 
                     </div>
