@@ -1,10 +1,43 @@
-import { FiArrowRight, FiStar } from "react-icons/fi";
+import { FiStar } from "react-icons/fi";
 import { motion } from "framer-motion";
+
+const Star = ({ delay, top, left, size = "200px" }) => (
+    <motion.div
+      className="absolute"
+      style={{
+        top,
+        left,
+        width: size,
+        height: size,
+      }}
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: [1, 0.5, 1],  // Twinkle effect
+        scale: [1, 1.3, 1],    // Slight size change
+      }}
+      transition={{
+        repeat: Infinity,
+        duration: 1 + Math.random() * 2, // Randomized duration for variance
+        delay,
+        ease: "easeInOut",
+      }}
+    >
+      <FiStar color="white" size={size} />
+    </motion.div>
+  );
 
 export default function Hero() {
     return (
         <>
             <section className="relative overflow-hidden bg-gradient-to-br from-[#D2E3E3] via-[#FFF4D0] to-[#FFC844] py-16 md:py-24">
+               
+                <Star delay={0} top="10%" left="13%" size="120px" />
+                <Star delay={1} top="30%" left="90%" size="50px" />
+                <Star delay={1.5} top="50%" left="10%" size="70px" />
+                <Star delay={1.5} top="40%" left="8%" size="40px" />
+                <Star delay={0.8} top="80%" left="80%" size="50px" />
+                <Star delay={0.4} top="70%" left="92%" size="70px" />
+
                 <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center">
                     <motion.div
                     className="lg:w-1/2 mb-10 lg:mb-0"
