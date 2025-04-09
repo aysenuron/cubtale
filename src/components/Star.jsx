@@ -7,7 +7,7 @@ export default function Star({ delay, top, left, color, size }) {
 
     return (
             <motion.div
-              className="absolute"
+              className="absolute z-50"
               style={{
                 top,
                 left,
@@ -41,7 +41,7 @@ export default function Star({ delay, top, left, color, size }) {
                 },
               }}
             >
-              <FaStar color={color} size={size} />
+              <FaStar className="z-50" color={color} size={size} />
             </motion.div>
           );
 }

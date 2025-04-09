@@ -6,9 +6,9 @@ import Star from "./Star";
 export default function Hero() {
     return (
         <>
-            <section className="relative overflow-hidden py-16 md:py-16 md:mb-32 lg:mb-3 2xl:mb-40">
-                <Star delay={0} color="#9EA4D2" top="4%" left="76%" size="100px" />
-                <Star delay={1} color="#BCD5D6" top="30%" left="90%" size="50px" />
+            <section className="relative overflow-hidden py-16 md:py-12 md:mb-32 lg:mb-28 2xl:mb-40">
+                <Star delay={0} color="#9EA4D2" top="3%" left="76%" size="90px" />
+                <Star delay={1} color="#BCD5D6" top="20%" left="90%" size="50px" />
                 <Star delay={1.5} color="#F78E88" top="45%" left="87%" size="70px" />
                 <Star delay={1.5} color="#FFC844" top="80%" left="40%" size="70px" />
                 <Star delay={1.5} color="#F78E88" top="70%" left="45%" size="40px" />
@@ -23,28 +23,28 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2, duration: 1.5, ease: "easeOut" }}
                     >
-                        <h1 className="text-[#229A98] text-4xl md:text-5xl lg:text-7xl/20 tracking-tight mb-6">
-                            Place Your Brand Into Real Parenting Moments
-                        </h1>
-                        <p className="text-lg md:text-xl mb-8 text-neutral-700 max-w-xl">
-                        Over 45,000 parents across the US trust Cubtale to guide them through the everyday rhythms of baby care—feeding, sleep, diaper changes, and all the little moments in between.
-                        <br /><br />
-                        We help brands show up seamlessly in these moments, where parents are already paying attention.
-                        </p>
-                        <button className="font-extrabold z-10 bg-gradient-to-b from-[#F78E88] to-[#D76D6D] hover:opacity-90 text-white cursor-pointer text-lg py-4 px-8 rounded-full shadow-xl hover:shadow-none transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
-                            Let's Talk 👋🏻
-                        </button>
-                        <div>
-                            <div className="mt-8 flex items-center">
+                        <div className="mb-4">
+                            <div className="mb-1 flex items-center">
                                 {[...Array(5)].map((_, i) => (
                                     <FiStar key={i} className="text-[#FFC83D] fill-[#FFC83D]" />
                                 ))}
                             </div>
-                            <p className="!font-extrabold text-sm text-neutral-600">Trusted by 45,000+ parents</p>
+                            <p className="text-sm text-[#1F5066]">Trusted by 45,000+ parents</p>
                         </div>
+                        <h1 className="text-[#229A98] text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl tracking-tight mb-6 font-medium">
+                            Place Your Brand <br /> <span className="lg:text-5xl 2xl:text-6xl text-[#9EA4D2]">Into Real Parenting Moments</span>
+                        </h1>
+                        <p className="text-lg mb-8 text-[#1F5066] max-w-xl">
+                        Over 45,000 parents across the US trust Cubtale to guide them through the everyday rhythms of baby care—feeding, sleep, diaper changes, and all the little moments in between.
+                        <br /><br />
+                        <span className="font-bold">We help brands show up seamlessly in these moments, where parents are already paying attention.</span>
+                        </p>
+                        <button className="font-extrabold z-10 bg-gradient-to-b from-[#F78E88] to-[#D76D6D] hover:opacity-90 text-white cursor-pointer text-xl py-4 px-12 rounded-full shadow-xl hover:shadow-none transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
+                            Let's Talk 👋🏻
+                        </button>
                     </motion.div>
                     <motion.div
-                    className="ml-12 -z-10"
+                    className="ml-12 -z-10 xl:ml-20"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2, duration: 1.5, ease: "easeOut" }}
@@ -55,7 +55,7 @@ export default function Hero() {
                         loop
                         muted
                         playsInline
-                        className="w-md 2xl:w-xl"
+                        className="w-xs 2xl:w-md"
                       />
                     </motion.div>
                 </div>
