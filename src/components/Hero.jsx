@@ -1,30 +1,7 @@
-import { FiStar } from "react-icons/fi";
 import { motion } from "framer-motion";
+import { FiStar } from "react-icons/fi";
+import Star from "./Star";
 
-const Star = ({ delay, top, left, color="white", size = "200px" }) => (
-    <motion.div
-      className="absolute"
-      style={{
-        top,
-        left,
-        width: size,
-        height: size,
-      }}
-      initial={{ opacity: 0 }}
-      animate={{
-        opacity: [0.5, 0.1, 0.5],  // Twinkle effect
-        scale: [1, 1.2, 1],    // Slight size change
-      }}
-      transition={{
-        repeat: Infinity,
-        duration: 10 + Math.random() * 2, // Randomized duration for variance
-        delay,
-        ease: "easeInOut",
-      }}
-    >
-      <FiStar color={color} size={size} />
-    </motion.div>
-  );
 
 export default function Hero() {
     return (
@@ -33,10 +10,11 @@ export default function Hero() {
                 <Star delay={0} color="#9EA4D2" top="4%" left="76%" size="100px" />
                 <Star delay={1} color="#BCD5D6" top="30%" left="90%" size="50px" />
                 <Star delay={1.5} color="#F78E88" top="45%" left="87%" size="70px" />
-                <Star delay={1.5} color="#FFC844" top="80%" left="40%" size="40px" />
-                <Star delay={1.5} color="#F78E88" top="70%" left="45%" size="60px" />
-                <Star delay={0.8} color="#F78E88" top="70%" left="85%" size="50px" />
+                <Star delay={1.5} color="#FFC844" top="80%" left="40%" size="70px" />
+                <Star delay={1.5} color="#F78E88" top="70%" left="45%" size="40px" />
+                <Star delay={0.8} color="#229A98" top="70%" left="85%" size="50px" />
                 <Star delay={0.4} color="#FFC844" top="70%" left="92%" size="120px" />
+                <Star delay={0.8} color="#229A98" top="70%" left="35%" size="30px" />
 
                 <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center">
                     <motion.div
