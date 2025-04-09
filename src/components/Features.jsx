@@ -74,9 +74,10 @@ export default function Features() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-[#1F5066] text-center text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl tracking-tight mb-6 font-medium"
+            className="text-[#1F5066] text-center leading-16 text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl tracking-tight mb-6 font-medium"
           >
-            Designed for Parents
+            Hyper-Targeted Ads <br />{" "}
+            <span className="text-[#229A98]">For Better Results</span>
           </motion.h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -94,16 +95,16 @@ export default function Features() {
                 <div
                   className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 ${
                     i === 0
-                      ? "bg-pink-100"
+                      ? "bg-pink-50"
                       : i === 1
-                      ? "bg-yellow-100"
+                      ? "bg-yellow-50"
                       : i === 2
-                      ? "bg-purple-100"
+                      ? "bg-purple-50"
                       : i === 3
-                      ? "bg-teal-100"
+                      ? "bg-teal-50"
                       : i === 4
-                      ? "bg-blue-100"
-                      : "bg-red-100"
+                      ? "bg-blue-50"
+                      : "bg-red-50"
                   }`}
                 >
                   {feature.icon}
