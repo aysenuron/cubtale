@@ -23,7 +23,7 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2, duration: 1.5, ease: "easeOut" }}
                     >
-                        <h1 className="text-[#229A98] text-4xl md:text-5xl lg:text-7xl tracking-tight mb-6">
+                        <h1 className="text-[#229A98] text-4xl md:text-5xl lg:text-7xl/20 tracking-tight mb-6">
                             Place Your Brand Into Real Parenting Moments
                         </h1>
                         <p className="text-lg md:text-xl mb-8 text-neutral-700 max-w-xl">
@@ -31,7 +31,7 @@ export default function Hero() {
                         <br /><br />
                         We help brands show up seamlessly in these moments, where parents are already paying attention.
                         </p>
-                        <button className="font-extrabold z-10 bg-[#259591] hover:bg-[#9594D2] text-white cursor-pointer text-lg py-4 px-8 rounded-full shadow-xl hover:shadow-none transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
+                        <button className="font-extrabold z-10 bg-gradient-to-b from-[#F78E88] to-[#D76D6D] hover:opacity-90 text-white cursor-pointer text-lg py-4 px-8 rounded-full shadow-xl hover:shadow-none transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
                             Let's Talk 👋🏻
                         </button>
                         <div>
@@ -55,7 +55,7 @@ export default function Hero() {
                         loop
                         muted
                         playsInline
-                        className="w-md 2xl:w-2xl"
+                        className="w-md 2xl:w-xl"
                       />
                     </motion.div>
                 </div>
