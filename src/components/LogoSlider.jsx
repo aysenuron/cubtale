@@ -37,7 +37,7 @@ const Slider = () => {
 
 export default function LogoSlider() {
   return (
-    <section className="relative bg-[#d0d3e8]">
+    <section className="relative">
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] -translate-y-full z-[-1]">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
@@ -47,8 +47,8 @@ export default function LogoSlider() {
           ></path>
         </svg>
       </div>
-      <div className="flex flex-col gap-4 py-12">
-        <h2 className="text-white text-center text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl tracking-tight mb-6 font-medium">
+      <div className="flex bg-gradient-to-t from-white to-[#d0d3e8] flex-col gap-12 py-20">
+        <h2 className="text-[#1F5066] text-center text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl tracking-tight mb-6 font-medium">
           Our Amazing Brand Partners
         </h2>
         <Slider />

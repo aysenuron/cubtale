@@ -5,7 +5,7 @@ import Star from "./Star";
 export default function Hero() {
   return (
     <>
-      <section className="relative overflow-hidden py-16 md:py-20 md:mb-32 lg:mb-6 2xl:mb-40">
+      <section className="relative overflow-hidden py-8 md:py-16 md:mb-32 lg:mb-6 2xl:mb-40">
         <Star delay={0} color="#9EA4D2" top="3%" left="76%" size="90px" />
         <Star delay={1} color="#BCD5D6" top="20%" left="90%" size="50px" />
         <Star delay={1.5} color="#F78E88" top="45%" left="87%" size="70px" />
