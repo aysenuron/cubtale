@@ -9,3 +9,18 @@ body {
   margin: 0;
   font-family: Raleway, sans-serif;
 }
+
+/* Define the keyframe animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Apply the animation to the slider */
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}

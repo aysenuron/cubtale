@@ -1,17 +1,16 @@
-import './App.css'
-import NavBar from './components/NavBar'
-import Hero from './components/Hero'
-import Stats from './components/Stats'
+import "./App.css";
+import NavBar from "./components/NavBar";
+import Hero from "./components/Hero";
+import LogoSlider from "./components/LogoSlider";
 
 function App() {
-
   return (
     <>
       <NavBar />
       <Hero />
-      <Stats />
+      <LogoSlider />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
