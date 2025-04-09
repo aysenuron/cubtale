@@ -1,7 +1,7 @@
 import { FiStar } from "react-icons/fi";
 import { motion } from "framer-motion";
 
-const Star = ({ delay, top, left, size = "200px" }) => (
+const Star = ({ delay, top, left, color="white", size = "200px" }) => (
     <motion.div
       className="absolute"
       style={{
@@ -12,40 +12,40 @@ const Star = ({ delay, top, left, size = "200px" }) => (
       }}
       initial={{ opacity: 0 }}
       animate={{
-        opacity: [1, 0.5, 1],  // Twinkle effect
-        scale: [1, 1.3, 1],    // Slight size change
+        opacity: [0.5, 0.1, 0.5],  // Twinkle effect
+        scale: [1, 1.2, 1],    // Slight size change
       }}
       transition={{
         repeat: Infinity,
-        duration: 1 + Math.random() * 2, // Randomized duration for variance
+        duration: 10 + Math.random() * 2, // Randomized duration for variance
         delay,
         ease: "easeInOut",
       }}
     >
-      <FiStar color="white" size={size} />
+      <FiStar color={color} size={size} />
     </motion.div>
   );
 
 export default function Hero() {
     return (
         <>
-            <section className="relative overflow-hidden bg-gradient-to-br from-[#D2E3E3] via-[#FFF4D0] to-[#FFC844] py-16 md:py-24">
-               
-                <Star delay={0} top="10%" left="13%" size="120px" />
-                <Star delay={1} top="30%" left="90%" size="50px" />
-                <Star delay={1.5} top="50%" left="10%" size="70px" />
-                <Star delay={1.5} top="40%" left="8%" size="40px" />
-                <Star delay={0.8} top="80%" left="80%" size="50px" />
-                <Star delay={0.4} top="70%" left="92%" size="70px" />
+            <section className="relative overflow-hidden py-16 md:py-16 md:mb-32 lg:mb-3 2xl:mb-40">
+                <Star delay={0} color="#9EA4D2" top="4%" left="76%" size="100px" />
+                <Star delay={1} color="#BCD5D6" top="30%" left="90%" size="50px" />
+                <Star delay={1.5} color="#F78E88" top="45%" left="87%" size="70px" />
+                <Star delay={1.5} color="#FFC844" top="80%" left="40%" size="40px" />
+                <Star delay={1.5} color="#F78E88" top="70%" left="45%" size="60px" />
+                <Star delay={0.8} color="#F78E88" top="70%" left="85%" size="50px" />
+                <Star delay={0.4} color="#FFC844" top="70%" left="92%" size="120px" />
 
                 <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center">
                     <motion.div
                     className="lg:w-1/2 mb-10 lg:mb-0"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, ease: "easeOut" }}
+                    transition={{ delay: 0.2, duration: 1.5, ease: "easeOut" }}
                     >
-                        <h1 className="text-4xl md:text-5xl lg:text-7xl text-[#254A5D] drop-shadow-sm tracking-tight mb-6">
+                        <h1 className="text-[#229A98] text-4xl md:text-5xl lg:text-7xl tracking-tight mb-6">
                             Place Your Brand Into Real Parenting Moments
                         </h1>
                         <p className="text-lg md:text-xl mb-8 text-neutral-700 max-w-xl">
@@ -53,7 +53,7 @@ export default function Hero() {
                         <br /><br />
                         We help brands show up seamlessly in these moments, where parents are already paying attention.
                         </p>
-                        <button className="bg-white hover:bg-[#259591] hover:text-white cursor-pointer text-gray-900 font-bold py-4 px-8 rounded-xl shadow-lg transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+                        <button className="font-extrabold z-10 bg-[#259591] hover:bg-[#9594D2] text-white cursor-pointer text-lg py-4 px-8 rounded-full shadow-xl hover:shadow-none transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
                             Let's Talk 👋🏻
                         </button>
                         <div>
@@ -62,12 +62,24 @@ export default function Hero() {
                                     <FiStar key={i} className="text-[#FFC83D] fill-[#FFC83D]" />
                                 ))}
                             </div>
-                            <p className="text-sm text-neutral-600">Trusted by 45,000+ parents</p>
+                            <p className="!font-extrabold text-sm text-neutral-600">Trusted by 45,000+ parents</p>
                         </div>
                     </motion.div>
-                    <div>
-
-                    </div>
+                    <motion.div
+                    className="ml-12 -z-10"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2, duration: 1.5, ease: "easeOut" }}
+                    >
+                      <video
+                        src="/hero-video.mp4"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-md 2xl:w-2xl"
+                      />
+                    </motion.div>
                 </div>
             </section>
         </>
