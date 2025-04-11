@@ -1,5 +1,3 @@
-import Baby from "./Baby";
-
 const logos = [
   "/logos/babybrezza.webp",
   "/logos/BisbeeBaby_Logo.avif",

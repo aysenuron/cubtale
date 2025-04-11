@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { FiStar } from "react-icons/fi";
 import Star from "./Star";
+import Button from "./Button";
 
 export default function Hero() {
   return (
@@ -49,9 +50,9 @@ export default function Hero() {
                 parents are already paying attention.
               </span>
             </p>
-            <button className="font-extrabold z-10 bg-gradient-to-b from-[#F78E88] to-[#D76D6D] hover:opacity-90 text-white cursor-pointer text-xl py-4 px-12 rounded-full shadow-xl hover:shadow-none transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
+            <Button colorFrom={"#F78E88"} colorTo={"#D76D6D"}>
               Let's Talk 👋🏻
-            </button>
+            </Button>
           </motion.div>
           <motion.div
             className="ml-12 -z-10 xl:ml-20"
