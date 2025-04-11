@@ -50,9 +50,7 @@ export default function Hero() {
                 parents are already paying attention.
               </span>
             </p>
-            <Button colorFrom={"#F78E88"} colorTo={"#D76D6D"}>
-              Let's Talk 👋🏻
-            </Button>
+            <Button>Let's Talk 👋🏻</Button>
           </motion.div>
           <motion.div
             className="ml-12 -z-10 xl:ml-20"

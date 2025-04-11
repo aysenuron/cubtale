@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { FiPackage, FiHeart, FiBox, FiMoon, FiActivity } from "react-icons/fi";
 import Button from "./Button";
+import Star from "./Star";
 
 const partnerCategories = [
   {
@@ -44,7 +45,15 @@ export default function Partners() {
           </svg>
         </div>
       </div>
-      <section className="bg-gradient-to-t from-white to-[#D2E3E3] mb-40">
+      <section className="relative bg-gradient-to-t from-white to-[#D2E3E3] mb-40 overflow-hidden">
+        <Star delay={0} color="#9EA4D2" top="3%" left="76%" size="90px" />
+        <Star delay={1} color="#F78E88" top="20%" left="90%" size="50px" />
+        <Star delay={1.5} color="#F78E88" top="40%" left="87%" size="70px" />
+        <Star delay={1.5} color="#FFC844" top="80%" left="90%" size="70px" />
+        <Star delay={1.5} color="#9EA4D2" top="50%" left="75%" size="50px" />
+        <Star delay={0.8} color="#FFC844" top="70%" left="85%" size="50px" />
+        <Star delay={0.4} color="#F78E88" top="30%" left="82%" size="30px" />
+        <Star delay={0.8} color="#9EA4D2" top="70%" left="80%" size="30px" />
         <div className="container ml-auto px-4 flex flex-col lg:flex-row gap-16 items-center">
           <div className="w-72">
             <img
@@ -97,9 +106,7 @@ export default function Partners() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.8 }}
             >
-              <Button colorFrom={"#F78E88"} colorTo={"#D76D6D"}>
-                Schedule a call ⚡️
-              </Button>
+              <Button>Schedule a call ⚡️</Button>
             </motion.div>
           </motion.div>
         </div>
