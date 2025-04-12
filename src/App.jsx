@@ -5,6 +5,9 @@ import LogoSlider from "./components/LogoSlider";
 import Features from "./components/Features";
 import Stats from "./components/Stats";
 import Partners from "./components/Partners";
+import Benefits from "./components/Benefits";
+import Team from "./components/Team";
+import CallToAction from "./components/CallToAction";
 
 function App() {
   return (
@@ -15,6 +18,9 @@ function App() {
       <Features />
       <Stats />
       <Partners />
+      <Benefits />
+      <Team />
+      <CallToAction />
     </>
   );
 }

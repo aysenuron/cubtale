@@ -74,7 +74,7 @@ export default function Features() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-[#1F5066] text-center leading-16 text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl tracking-tight mb-6 font-medium"
+            className="text-[#1F5066] text-center leading-10 md:leading-12 lg:leading-16 text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl tracking-tight mb-6 font-medium"
           >
             Hyper-Targeted Ads <br />{" "}
             <span className="text-[#229A98]">For Better Results</span>
@@ -109,8 +109,10 @@ export default function Features() {
                 >
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-                <p className="text-neutral-700">{feature.description}</p>
+                <h3 className="text-xl font-bold mb-3 text-[#1F5066]">
+                  {feature.title}
+                </h3>
+                <p className="text-[#1F5066]">{feature.description}</p>
               </motion.div>
             );
           })}

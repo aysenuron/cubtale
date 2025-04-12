@@ -54,7 +54,7 @@ export default function Partners() {
         <Star delay={0.8} color="#FFC844" top="70%" left="85%" size="50px" />
         <Star delay={0.4} color="#F78E88" top="30%" left="82%" size="30px" />
         <Star delay={0.8} color="#9EA4D2" top="70%" left="80%" size="30px" />
-        <div className="container ml-auto px-4 flex flex-col lg:flex-row gap-16 items-center">
+        <div className="container ml-auto mr-auto px-4 flex flex-col lg:flex-row gap-16 items-center">
           <div className="w-72">
             <img
               className="w-full"
@@ -93,7 +93,9 @@ export default function Partners() {
                     {category.icon}
                   </div>
                   <div>
-                    <h3 className="font-bold text-xl">{category.title}</h3>
+                    <h3 className="font-bold text-[#1F5066] text-xl">
+                      {category.title}
+                    </h3>
                   </div>
                 </motion.div>
               ))}
@@ -104,7 +106,7 @@ export default function Partners() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.8 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
             >
               <Button>Schedule a call ⚡️</Button>
             </motion.div>
