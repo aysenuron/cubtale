@@ -22,7 +22,7 @@ const benefits = [
 
 export default function Benefits() {
   return (
-    <section className="py-20 relative">
+    <section className="py-20 relative overflow-hidden">
       <Star delay={0} color="#229A98" top="3%" left="80%" size="80px" />
       <Star delay={1} color="#F78E88" top="20%" left="50%" size="50px" />
       <Star delay={1.5} color="#FFC844" top="10%" left="60%" size="30px" />
