@@ -93,7 +93,7 @@ export default function Partners() {
                     {category.icon}
                   </div>
                   <div>
-                    <h3 className="font-bold text-[#1F5066] text-xl">
+                    <h3 className="font-bold text-[#1F5066] text-lg lg:text-xl">
                       {category.title}
                     </h3>
                   </div>

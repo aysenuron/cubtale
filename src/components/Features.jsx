@@ -47,23 +47,6 @@ const features = [
   },
 ];
 
-const featureVariants = {
-  offscreen: {
-    y: 50,
-    opacity: 0,
-  },
-  onscreen: () => ({
-    y: 0,
-    opacity: 1,
-    transition: {
-      type: "spring",
-      bounce: 0.4,
-      duration: 0.8,
-      delay: 0.2,
-    },
-  }),
-};
-
 export default function Features() {
   return (
     <section className="py-20">
@@ -86,10 +69,10 @@ export default function Features() {
               <motion.div
                 key={i}
                 custom={i}
-                initial="offscreen"
-                whileInView="onscreen"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
-                variants={featureVariants}
+                transition={{ duration: 0.6 }}
                 className="bg-white rounded-2xl p-8 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border border-gray-100"
               >
                 <div

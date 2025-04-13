@@ -10,17 +10,55 @@ body {
   font-family: Raleway, sans-serif;
 }
 
-/* Define the keyframe animation */
-@keyframes marquee {
+@keyframes marquee-100 {
   0% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-250%);
   }
 }
 
-/* Apply the animation to the slider */
+@keyframes marquee-200 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-250%);
+  }
+}
+
+@keyframes marquee-300 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-300%);
+  }
+}
+
+/* Base animation for mobile (default) */
 .animate-marquee {
-  animation: marquee 20s linear infinite;
+  animation: marquee-100 20s linear infinite;
+}
+
+/* Medium (md) screens: Apply marquee-200 */
+@media (min-width: 768px) {
+  .animate-marquee {
+    animation: marquee-200 50s linear infinite;
+  }
+}
+
+/* Large (lg) screens: Apply marquee-200 */
+@media (min-width: 1024px) {
+  .animate-marquee {
+    animation: marquee-200 80s linear infinite;
+  }
+}
+
+/* XL (2xl) screens: Apply marquee-300 */
+@media (min-width: 1920px) {
+  .animate-marquee {
+    animation: marquee-300 200s linear infinite;
+  }
 }

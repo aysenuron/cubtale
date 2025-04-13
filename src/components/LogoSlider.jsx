@@ -15,7 +15,9 @@ const LogosMapped = () => {
         key={index}
         src={logo}
         alt={`Logo ${index}`}
-        className={`${isLast ? "w-16" : "w-36"} h-auto object-contain mx-16`} // You can adjust the width and margin to fit your design
+        className={`${
+          isLast ? "w-16" : "w-36"
+        } h-auto object-contain mr-12 lg:mr-32`}
       />
     );
   });
@@ -25,6 +27,7 @@ const Slider = () => {
   return (
     <div className="relative overflow-hidden">
       <div className="flex animate-marquee">
+        <LogosMapped />
         <LogosMapped />
         <LogosMapped />
         <LogosMapped />
